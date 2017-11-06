@@ -1,0 +1,14 @@
+<h3>My Grocery List</h3>
+<input type="text" class="form-control" [(ngModel)] = "addedItem">
+<br>
+<button class="btn btn-primary" [disabled] = "allowNewItem" (click)= "onItemAdded()">Add an item</button>
+<!--<p *ngIf="display; else itemAdded">No item was added</p>
+<ng-template #itemAdded>
+<p>An item was added</p>
+</ng-template>-->
+<!--<p *ngFor = "let item of items">{{item}}</p>-->
+<p [ngStyle] = "{'font-family': 'Times New Roman'}">No item was added</p>
+<!--<p [ngClass] = "{noItem : shouldClassBeAdded()}">No item was added</p>-->
+
+<br>
+<grocery-item></grocery-item>
